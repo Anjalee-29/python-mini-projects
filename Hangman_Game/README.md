@@ -20,9 +20,3 @@ Running the script is really simple! Just open a terminal in the folder where yo
 ```sh
 python hangman.py
 ```
-## 📺 Demo
-<p align="center">
-<img src="https://github.com/ndleah/python-mini-project/blob/main/IMG/hangman.gif" width=70% height=70%>
-
-## 🤖 Author
-[Leah Nguyen](https://github.com/ndleah)
