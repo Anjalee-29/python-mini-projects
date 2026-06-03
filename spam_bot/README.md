@@ -1,4 +1,3 @@
-
 # Spam Bot >>
     This is just a mini spam bot, you can used to prank friends, here i added 2 bots 
         1] bot1 -> which deals only one message until you clicked "q" to stop
@@ -10,8 +9,3 @@
 ### How to run the script
     windows : just click on run 
     linux : use this command -> python3 bot1.py
-
-
-## *Author Name*
-
-[Prafull Sonawane](https://github.com/prafuel)
