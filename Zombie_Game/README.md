@@ -20,14 +20,12 @@ Simple Zombie Survival Quiz Game built with python
 
 ## ⚙️ Languages or Frameworks Used
 
-<!--Remove the below lines and add yours -->
 
 The only module required is random. You can install it using
 `pip install random`
 
 ## 🌟 How to run
 
-<!--Remove the below lines and add yours -->
 
 It is really simple to run the game. Simple head over to the directory where python file is saved and run the following command:
 `python zombie.py`

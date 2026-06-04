@@ -1,5 +1,5 @@
 # Script Title
-Multiple Images To Pdf Converter
+Multiple Images-To-Pdf Converter
 
 ## 🛠️ Description
 <!--Remove the below lines and add yours -->
