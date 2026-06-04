@@ -26,8 +26,8 @@ A terminal-based zombie survival quiz game built with Python. Answer 10 question
 Clone the repository and run the game:
 
 ```bash
-git clone https://github.com/anjalee-29/python-mini-projects/zombie-survival-quiz.git
-cd zombie-survival-quiz
+git clone https://github.com/anjalee-29/python-mini-projects/Zombie_Game.git
+cd Zombie_Game
 python zombie.py
 ```
 
