@@ -9,6 +9,3 @@ tkinter should come pre installed with python
 
 ### How to run the script
 Just run the python file
-
-### Screenshot/GIF showing the sample use of the script
-image.png
