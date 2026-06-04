@@ -1,32 +1,80 @@
 import os
+import sys
+import argparse
 import img2pdf
 
-def images_to_pdf(image_folder_path):
+SUPPORTED_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.gif')
 
-    # Verifying the give path exists or not
 
-    if os.path.exists(image_folder_path):
-        print("Given images folder path verified -- processing")
-    else:
-        print("Given images folder Not exist ")
-        return
-    
-    images = [imgs for imgs in os.listdir(image_folder_path) if imgs.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+def images_to_pdf(image_folder_path, output_path=None):
+    """Convert all images in a folder to a single PDF file.
 
-    images.sort()
+    Args:
+        image_folder_path (str): Path to the folder containing images.
+        output_path (str, optional): Path for the output PDF file.
+                                     Defaults to 'Output.pdf' inside the image folder.
+    """
+    # Validate the folder path
+    if not os.path.exists(image_folder_path):
+        print(f"Error: Folder not found — '{image_folder_path}'")
+        sys.exit(1)
 
-    # List to store image bytes of images present in the directory
-    images_bytes = list()
+    if not os.path.isdir(image_folder_path):
+        print(f"Error: '{image_folder_path}' is not a directory.")
+        sys.exit(1)
 
-    # converting all the images to image-bytes and appending them to a list for further processing
-    for i in images:
-        with open(os.path.join(image_folder_path, i), "rb") as im:
-            images_bytes.append(im.read())
+    # Collect and sort supported images
+    images = sorted(
+        f for f in os.listdir(image_folder_path)
+        if f.lower().endswith(SUPPORTED_EXTENSIONS)
+    )
 
-    # To convert image bytes to bytes for pdf
-    pdf_image_bytes = img2pdf.convert(images_bytes)
-    with open('Output.pdf', "wb") as pdfFile:
-        pdfFile.write(pdf_image_bytes)
-        
-# Call the function to convert the images folder to pdf
-images_to_pdf(folder_path)
+    if not images:
+        print(f"No supported images ({', '.join(SUPPORTED_EXTENSIONS)}) found in '{image_folder_path}'.")
+        sys.exit(1)
+
+    print(f"Found {len(images)} image(s). Converting to PDF...")
+
+    # Default output path: inside the image folder
+    if output_path is None:
+        output_path = os.path.join(image_folder_path, "Output.pdf")
+
+    # Ensure the output directory exists
+    output_dir = os.path.dirname(output_path)
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # Read image bytes
+    images_bytes = []
+    for filename in images:
+        filepath = os.path.join(image_folder_path, filename)
+        with open(filepath, "rb") as img_file:
+            images_bytes.append(img_file.read())
+
+    # Convert and write PDF
+    pdf_bytes = img2pdf.convert(images_bytes)
+    with open(output_path, "wb") as pdf_file:
+        pdf_file.write(pdf_bytes)
+
+    print(f"PDF saved to: {os.path.abspath(output_path)}")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Convert a folder of images into a single PDF."
+    )
+    parser.add_argument(
+        "folder",
+        help="Path to the folder containing images."
+    )
+    parser.add_argument(
+        "-o", "--output",
+        default=None,
+        help="Path for the output PDF file (default: Output.pdf inside the image folder)."
+    )
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    images_to_pdf(args.folder, args.output)
