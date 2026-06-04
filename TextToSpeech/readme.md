@@ -1,4 +1,4 @@
-# Script Title
+# Text to Speech
 A program that allows the user to convert the text he/she inputs into the program into a voice audio that is played in real time.
 
 ### Prerequisites
