@@ -14,7 +14,7 @@ A terminal-based zombie survival quiz game built with Python. Answer 10 question
 
 ---
 
-## ⚙️ Requirement
+## ⚙️ Requirements
 
 - Python 3.x
 - No external libraries needed — uses only Python's built-in `random` module
