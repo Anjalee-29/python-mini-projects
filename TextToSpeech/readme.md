@@ -14,7 +14,7 @@ Type anything into the input box, click the button, and the app will read it out
 
 - Python 3.x
 - `pyttsx3` — for text-to-speech
-- `tkinter` — for the GUI (built into Python on Windows/macOS)
+- `tkinter` — for the GUI (built into Python on Windows/macOS
 
 **Linux users** need to install `tkinter` separately:
 ```bash
