@@ -12,7 +12,7 @@ The game picks a random word from a built-in list and gives you 10 attempts to g
 
 ## ⚙️ Requirements
 
- Python 3.x
+- Python 3.x
 - No external libraries needed — uses only Python's built-in `random` module
 
 ---
