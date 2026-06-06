@@ -16,7 +16,7 @@ A simple Python utility to convert a folder of images into a single PDF file.
 
 Install the dependency with:
 
-```bash
+```bas
 pip install img2pdf
 ```
 
