@@ -16,7 +16,7 @@ A fun Python spam bot to prank your friends — sends repeated messages automati
 ## ⚙️ Requirements
 
 - Python 3.x
-- Windows or Linux (macOS may have permission issues with `pyautogui`
+- Windows or Linux (macOS may have permission issues with `pyautogui`)
 
 Install dependencies:
 
