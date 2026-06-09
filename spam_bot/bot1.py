@@ -5,7 +5,7 @@ import time
 string = input("Enter what you want to spam: \n> ")
 
 # Countdown before starting
-print("Starting in...")
+print("Starting in....")
 for i in range(3, 0, -1):
     print(i)
     time.sleep(1)
