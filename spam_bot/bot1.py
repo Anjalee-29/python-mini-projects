@@ -1,4 +1,4 @@
-import pyautogui as py
+import pyautogui as pyg
 import keyboard as kbd
 import time
 
