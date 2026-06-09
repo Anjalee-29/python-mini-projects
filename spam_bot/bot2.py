@@ -9,4 +9,4 @@ with open(txt_path, 'r') as txt:
     content = txt.read()
     for word in content.split():
         print(f"Sending: {word}")
-        spammingBot(word)
+        spammingBot(word
