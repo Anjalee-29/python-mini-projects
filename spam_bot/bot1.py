@@ -1,6 +1,6 @@
 import pyautogui as pyg
 import keyboard as kbd
-import tim
+import time
 
 string = input("Enter what you want to spam: \n> ")
 
