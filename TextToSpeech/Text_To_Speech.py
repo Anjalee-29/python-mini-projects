@@ -1,5 +1,5 @@
 import pyttsx3
-import tkinter as tk
+import tkinter as t
 
 
 class GUI:
