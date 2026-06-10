@@ -59,8 +59,6 @@ python Text_To_Speech.py
 └── README.md
 ```
 
----
-
 ## 📝 Notes
 
 - Works on Windows, macOS, and Linux
